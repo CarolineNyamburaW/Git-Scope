@@ -11,13 +11,13 @@
 
   h1 {
    font-size: 8vh;
-   color: #DAA520;
+   color: #A32CC4;
   
   }
 
   h2 {
    font-size: 5vh;
-   color: #DAA520;
+   color: #A32CC4;
   }
 
   h1,
@@ -29,48 +29,26 @@
   p {
     font-family: 'Rancho', cursive; 
   }
-  
+
   .content {
     background-image: url(https://wallpapercave.com/wp/wp3082255.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .navbar {
-    top: 0;
-    left: 0;
-    right: 0;
-    align-items: center;
-    background-color: #000;
-    color: white;
-    font-weight: 600;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  .navbar img {
-    margin: 0 16px;
-  }
-
   .all{
     background-color:rgba(0,0,0,0.8);
     display: flex;
-    margin: 50px auto 30px;
+    margin: 0px auto 30px;
     padding: 0 16px;
     max-width: 1000px;
     flex-direction: column;
     align-items: center;
   }
   .welcome {
-
     padding: 2vh 8vh;
     display: flex;
     flex-direction: row;
     transition: all 0.2s ease-in-out;
-    margin-top: 5vh;
     background-color: transparent;
     color: #000;
     font-weight: 600;
@@ -81,7 +59,7 @@
   }
   .welcome span {
     font-size: 6vh;
-    color: #DAA520;
+    color: #A32CC4;
   }
 
   form {
@@ -91,22 +69,21 @@
     display: flex!important;
   }
   form .form-control {
-    margin: 10px;
-    font-family: 'Rancho', cursive;    
+    margin-right: 2vw;
+    font-family: 'Rancho', cursive;
     font-size: 4vh;
+    /* width: 40%; */
   }
   .btn-warning {
     color: #fff;
-    background-color: #DAA520;
-    border-color: #DAA520;
-    padding: 1vh 5vh;
+    background-color: #A32CC4;
+    border-color: #A32CC4;
+    padding: 3vh 3vh;
     font-family: 'Rancho', cursive;    
     font-size: 4vh;
-    margin-bottom: 5vh;
   }
-
   .footer{
-  background-color: #000;
+  background-color: rgba(0,0,0,0.9);
     position: relative;
     color: white;
     display: flex;
@@ -116,12 +93,12 @@
     flex-direction: column;
 }
 .footer p{
-  color: #ffffff;
+  color: #A32CC4;
   font-style: italic;
   font-size: 3vh;
 }
 .footer span {
-  color: #DAA520;
+  color: #A32CC4;
   font-style: italic;
   font-size: 4vh;
  
@@ -137,46 +114,38 @@
 
 <div class="content" role="main">
 
-    <!-- Navbar -->
-    <div class="navbar" >
-      <img width="140" src="../assets/images/logo.png">
-      <!-- <h1>Git Scope</h1> -->
-  
-    </div>
-
     <div class="all">
-
+      <img width="300" src="../assets/images/logo.png" style="margin-top: 2vh;" class="d-flex justify-content-center">
       <!-- Welcome-->
       <div class="welcome">
-        <span> Welcome to {{ title }} ! </span>
-        <p style=" margin-top: 2vh; font-size: 4vh; color: #fff;"> Where we give a voice to your creativity</p>
+        
+        <span class="d-flex justify-content-center"> Welcome to {{ title }} ! </span>
+        <p style="font-size: 4vh; color: #fff;"> Now an easy way to find fellow developers and their Git Repositories in one easy search.</p>
       </div>
       <div class="container text-center">
-        <p></p> 
-         <p></p>
       </div>
  
       <div class="container text-center">
         <h2 style="margin-top: 5vh;">Search GitHub Name Here</h2>
-        <p></p>
-        <p></p> 
-        <p></p>
-      </div>
-      <form action="" class="form">
-      <div class="form-group d-md-flex">
-        <input type="name" class="form-control" name="name" placeholder="Git Hub User Name" ngModel>
-      </div>
-      <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-warning" name="submit">Search
-          <i class="fa fa-search" id="delete"></i>
-        </button>
-      </div>
+
+      <form action="" class="form d-flex justify-content-center" style="margin-bottom: 10vh;">
+        <div class="form-group d-md-flex">
+
+          <input type="name" class="form-control" name="name" placeholder="Git Hub User Name"  style="padding: 2vh 10vh; " ngModel>
+
+          <div class="">
+            <button type="submit" class="btn btn-warning" name="submit">
+              <i class="fa fa-search" id="submit"></i>
+            </button>
+           </div>
+          </div>
       
       </form>
-      
+      </div>
       
 
-  
+      <app-gitprofile></app-gitprofile>
+
       </div>
 
     <!-- Footer -->
