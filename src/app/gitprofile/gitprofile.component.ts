@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './gitprofile.component.html',
   styleUrls: ['./gitprofile.component.css']
 })
-export class GitprofileComponent implements OnInit {
+export class gitprofileComponent implements OnInit {
 
   constructor() { }
 
